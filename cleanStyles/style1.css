@@ -1,0 +1,69 @@
+body{
+    display: flex;
+}
+.block{
+    width:300px;
+    height:100px;
+    background: #cfe0f9;
+    position: absolute;
+    left:50%;
+    margin-left: -150px;
+    top: 100%;
+    margin-top: 8px;
+    border: 1px solid #1c1e24;
+    transform: scaleY(0);
+    transform-origin: 50% 0%;
+    box-sizing:border-box ;
+}
+.config > a:hover{   
+    transform: rotateZ(360deg);
+}
+.config{
+    background-color: #cfe0f9;
+    border: 1px solid #1c1e24;
+    box-sizing:border-box ;
+}
+.config:hover{
+    background-color: #4d638c;
+}
+.config:hover > .block{
+    transform: scaleY(1);
+    
+    transition: all 1s ease;
+}
+.block::before{
+    --size:20px;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    content: "";
+    left:50%;
+    margin-left:-10px;
+    margin-bottom: -9px;
+    transform: rotate(45deg);
+    bottom:100%;
+    background: #cfe0f9;
+    border: 1px solid #1c1e24;
+    border-right: 0px;
+    border-bottom: 0px;
+    box-sizing: border-box;
+}
+.config{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top:100px;
+    left:200px;
+}
+.config>a{
+    display:block;
+    width:48px;
+    height: 48px;
+    content: "";
+    transition: all 1s ease;
+    background-image: url(img/settings.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    cursor: default;
+}
